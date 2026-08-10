@@ -1,0 +1,892 @@
+
+
+yourLearner-landing/
+├── frontend/                    # Frontend application (React, Next.js, TypeScript)
+│   ├── public/                  # Static assets
+│   │   ├── images/              # Image assets
+│   │   ├── icons/               # Icon assets
+│   │   └── fonts/               # Font files
+│   │
+│   ├── src/
+│   │   ├── app/                 # Next.js App Router (pages and layouts)
+│   │   │   ├── layout.tsx       # Root layout
+│   │   │   ├── page.tsx         # Home page
+│   │   │   ├── globals.css      # Global styles
+│   │   │   ├── dashboard/       # Dashboard page
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   ├── courses/         # Courses page
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── [courseId]/  # Course details page
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   ├── practice/        # Practice page
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── [problemId]/ # Problem solving workspace
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   ├── community/       # Community page
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   ├── profile/         # User profile page
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   ├── auth/            # Authentication pages
+│   │   │   │   ├── login/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── register/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── layout.tsx
+│   │   │   └── settings/        # Settings page
+│   │   │       ├── page.tsx
+│   │   │       └── layout.tsx
+│   │   │
+│   │   ├── components/          # Reusable UI components
+│   │   │   ├── ui/              # Base UI components
+│   │   │   │   ├── Button/
+│   │   │   │   │   ├── Button.tsx
+│   │   │   │   │   ├── Button.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Input/
+│   │   │   │   │   ├── Input.tsx
+│   │   │   │   │   ├── Input.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Card/
+│   │   │   │   │   ├── Card.tsx
+│   │   │   │   │   ├── Card.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Modal/
+│   │   │   │   │   ├── Modal.tsx
+│   │   │   │   │   ├── Modal.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Dropdown/
+│   │   │   │   │   ├── Dropdown.tsx
+│   │   │   │   │   ├── Dropdown.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Badge/
+│   │   │   │   │   ├── Badge.tsx
+│   │   │   │   │   ├── Badge.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Avatar/
+│   │   │   │   │   ├── Avatar.tsx
+│   │   │   │   │   ├── Avatar.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── ProgressBar/
+│   │   │   │   │   ├── ProgressBar.tsx
+│   │   │   │   │   ├── ProgressBar.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Spinner/
+│   │   │   │   │   ├── Spinner.tsx
+│   │   │   │   │   ├── Spinner.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── index.ts       # Export all UI components
+│   │   │   │
+│   │   │   ├── layout/          # Layout components
+│   │   │   │   ├── Header/
+│   │   │   │   │   ├── Header.tsx
+│   │   │   │   │   ├── Header.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Footer/
+│   │   │   │   │   ├── Footer.tsx
+│   │   │   │   │   ├── Footer.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Sidebar/
+│   │   │   │   │   ├── Sidebar.tsx
+│   │   │   │   │   ├── Sidebar.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── Navigation/
+│   │   │   │   │   ├── Navigation.tsx
+│   │   │   │   │   ├── Navigation.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── features/        # Feature-specific components
+│   │   │   │   ├── dashboard/    # Dashboard components
+│   │   │   │   │   ├── LearningMetrics/
+│   │   │   │   │   │   ├── LearningMetrics.tsx
+│   │   │   │   │   │   ├── LearningMetrics.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ContinueLearning/
+│   │   │   │   │   │   ├── ContinueLearning.tsx
+│   │   │   │   │   │   ├── ContinueLearning.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ActivityCalendar/
+│   │   │   │   │   │   ├── ActivityCalendar.tsx
+│   │   │   │   │   │   ├── ActivityCalendar.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── WeeklyAnalytics/
+│   │   │   │   │   │   ├── WeeklyAnalytics.tsx
+│   │   │   │   │   │   ├── WeeklyAnalytics.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── Leaderboard/
+│   │   │   │   │   │   ├── Leaderboard.tsx
+│   │   │   │   │   │   ├── Leaderboard.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── RecentActivity/
+│   │   │   │   │   │   ├── RecentActivity.tsx
+│   │   │   │   │   │   ├── RecentActivity.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── Achievements/
+│   │   │   │   │   │   ├── Achievements.tsx
+│   │   │   │   │   │   ├── Achievements.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── AIRecommendations/
+│   │   │   │   │   │   ├── AIRecommendations.tsx
+│   │   │   │   │   │   ├── AIRecommendations.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   │
+│   │   │   │   ├── courses/      # Courses components
+│   │   │   │   │   ├── CourseCard/
+│   │   │   │   │   │   ├── CourseCard.tsx
+│   │   │   │   │   │   ├── CourseCard.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CourseList/
+│   │   │   │   │   │   ├── CourseList.tsx
+│   │   │   │   │   │   ├── CourseList.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CourseFilters/
+│   │   │   │   │   │   ├── CourseFilters.tsx
+│   │   │   │   │   │   ├── CourseFilters.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CourseProgress/
+│   │   │   │   │   │   ├── CourseProgress.tsx
+│   │   │   │   │   │   ├── CourseProgress.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CourseCurriculum/
+│   │   │   │   │   │   ├── CourseCurriculum.tsx
+│   │   │   │   │   │   ├── CourseCurriculum.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CourseReviews/
+│   │   │   │   │   │   ├── CourseReviews.tsx
+│   │   │   │   │   │   ├── CourseReviews.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   │
+│   │   │   │   ├── practice/     # Practice components
+│   │   │   │   │   ├── ProblemCard/
+│   │   │   │   │   │   ├── ProblemCard.tsx
+│   │   │   │   │   │   ├── ProblemCard.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProblemList/
+│   │   │   │   │   │   ├── ProblemList.tsx
+│   │   │   │   │   │   ├── ProblemList.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProblemFilters/
+│   │   │   │   │   │   ├── ProblemFilters.tsx
+│   │   │   │   │   │   ├── ProblemFilters.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── CodeEditor/
+│   │   │   │   │   │   ├── CodeEditor.tsx
+│   │   │   │   │   │   ├── CodeEditor.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── TestCaseResults/
+│   │   │   │   │   │   ├── TestCaseResults.tsx
+│   │   │   │   │   │   ├── TestCaseResults.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── DailyChallenge/
+│   │   │   │   │   │   ├── DailyChallenge.tsx
+│   │   │   │   │   │   ├── DailyChallenge.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   │
+│   │   │   │   ├── community/    # Community components
+│   │   │   │   │   ├── DiscussionCard/
+│   │   │   │   │   │   ├── DiscussionCard.tsx
+│   │   │   │   │   │   ├── DiscussionCard.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── DiscussionList/
+│   │   │   │   │   │   ├── DiscussionList.tsx
+│   │   │   │   │   │   ├── DiscussionList.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── StudyGroups/
+│   │   │   │   │   │   ├── StudyGroups.tsx
+│   │   │   │   │   │   ├── StudyGroups.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── Events/
+│   │   │   │   │   │   ├── Events.tsx
+│   │   │   │   │   │   ├── Events.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   │
+│   │   │   │   ├── profile/      # Profile components
+│   │   │   │   │   ├── ProfileHeader/
+│   │   │   │   │   │   ├── ProfileHeader.tsx
+│   │   │   │   │   │   ├── ProfileHeader.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProfileStats/
+│   │   │   │   │   │   ├── ProfileStats.tsx
+│   │   │   │   │   │   ├── ProfileStats.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProfileAchievements/
+│   │   │   │   │   │   ├── ProfileAchievements.tsx
+│   │   │   │   │   │   ├── ProfileAchievements.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProfileGoals/
+│   │   │   │   │   │   ├── ProfileGoals.tsx
+│   │   │   │   │   │   ├── ProfileGoals.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── ProfileCertificates/
+│   │   │   │   │   │   ├── ProfileCertificates.tsx
+│   │   │   │   │   │   ├── ProfileCertificates.test.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   │
+│   │   │   │   └── auth/         # Auth components
+│   │   │   │       ├── LoginForm/
+│   │   │   │       │   ├── LoginForm.tsx
+│   │   │   │       │   ├── LoginForm.test.tsx
+│   │   │   │       │   └── index.ts
+│   │   │   │       ├── RegisterForm/
+│   │   │   │       │   ├── RegisterForm.tsx
+│   │   │   │       │   ├── RegisterForm.test.tsx
+│   │   │   │       │   └── index.ts
+│   │   │   │       ├── SocialLogin/
+│   │   │   │       │   ├── SocialLogin.tsx
+│   │   │   │       │   ├── SocialLogin.test.tsx
+│   │   │   │       │   └── index.ts
+│   │   │   │       └── index.ts
+│   │   │   │
+│   │   │   └── common/          # Common/shared components
+│   │   │       ├── SearchBar/
+│   │   │       │   ├── SearchBar.tsx
+│   │   │       │   ├── SearchBar.test.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── FilterDropdown/
+│   │   │       │   ├── FilterDropdown.tsx
+│   │   │       │   ├── FilterDropdown.test.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── Pagination/
+│   │   │       │   ├── Pagination.tsx
+│   │   │       │   ├── Pagination.test.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── EmptyState/
+│   │   │       │   ├── EmptyState.tsx
+│   │   │       │   ├── EmptyState.test.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── ErrorBoundary/
+│   │   │       │   ├── ErrorBoundary.tsx
+│   │   │       │   ├── ErrorBoundary.test.tsx
+│   │   │       │   └── index.ts
+│   │   │       └── index.ts
+│   │   │
+│   │   ├── hooks/               # Custom React hooks
+│   │   │   ├── auth/            # Authentication hooks
+│   │   │   │   ├── useAuth.ts
+│   │   │   │   ├── useLogin.ts
+│   │   │   │   ├── useRegister.ts
+│   │   │   │   ├── useLogout.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── dashboard/       # Dashboard hooks
+│   │   │   │   ├── useLearningMetrics.ts
+│   │   │   │   ├── useProgress.ts
+│   │   │   │   ├── useDailyGoals.ts
+│   │   │   │   ├── useActivity.ts
+│   │   │   │   ├── useLeaderboard.ts
+│   │   │   │   ├── useAchievements.ts
+│   │   │   │   ├── useAIRecommendations.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── courses/         # Courses hooks
+│   │   │   │   ├── useCourses.ts
+│   │   │   │   ├── useCourseDetails.ts
+│   │   │   │   ├── useCourseProgress.ts
+│   │   │   │   ├── useCourseEnrollment.ts
+│   │   │   │   ├── useCourseReviews.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── practice/        # Practice hooks
+│   │   │   │   ├── useProblems.ts
+│   │   │   │   ├── useProblemDetails.ts
+│   │   │   │   ├── useCodeSubmission.ts
+│   │   │   │   ├── useTestCases.ts
+│   │   │   │   ├── useDailyChallenge.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── community/       # Community hooks
+│   │   │   │   ├── useDiscussions.ts
+│   │   │   │   ├── useStudyGroups.ts
+│   │   │   │   ├── useEvents.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── profile/         # Profile hooks
+│   │   │   │   ├── useProfile.ts
+│   │   │   │   ├── useProfileUpdate.ts
+│   │   │   │   ├── useGoals.ts
+│   │   │   │   ├── useCertificates.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── common/          # Common hooks
+│   │   │       ├── useFetch.ts
+│   │   │       ├── usePagination.ts
+│   │   │       ├── useSearch.ts
+│   │   │       ├── useFilter.ts
+│   │   │       ├── useSort.ts
+│   │   │       ├── useLocalStorage.ts
+│   │   │       ├── useDebounce.ts
+│   │   │       └── index.ts
+│   │   │
+│   │   ├── services/           # API service layer
+│   │   │   ├── api/            # API configuration
+│   │   │   │   ├── axiosInstance.ts
+│   │   │   │   ├── apiEndpoints.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── auth/           # Authentication services
+│   │   │   │   ├── authService.ts
+│   │   │   │   ├── tokenService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard services
+│   │   │   │   ├── metricsService.ts
+│   │   │   │   ├── progressService.ts
+│   │   │   │   ├── activityService.ts
+│   │   │   │   ├── leaderboardService.ts
+│   │   │   │   ├── achievementsService.ts
+│   │   │   │   ├── recommendationsService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── courses/        # Courses services
+│   │   │   │   ├── coursesService.ts
+│   │   │   │   ├── courseDetailsService.ts
+│   │   │   │   ├── enrollmentService.ts
+│   │   │   │   ├── progressService.ts
+│   │   │   │   ├── reviewsService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── practice/       # Practice services
+│   │   │   │   ├── problemsService.ts
+│   │   │   │   ├── problemDetailsService.ts
+│   │   │   │   ├── submissionService.ts
+│   │   │   │   ├── testCaseService.ts
+│   │   │   │   ├── dailyChallengeService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── community/      # Community services
+│   │   │   │   ├── discussionsService.ts
+│   │   │   │   ├── studyGroupsService.ts
+│   │   │   │   ├── eventsService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── profile/        # Profile services
+│   │   │   │   ├── profileService.ts
+│   │   │   │   ├── goalsService.ts
+│   │   │   │   ├── certificatesService.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── store/              # State management
+│   │   │   ├── slices/         # Redux slices (if using Redux)
+│   │   │   │   ├── authSlice.ts
+│   │   │   │   ├── dashboardSlice.ts
+│   │   │   │   ├── coursesSlice.ts
+│   │   │   │   ├── practiceSlice.ts
+│   │   │   │   ├── communitySlice.ts
+│   │   │   │   ├── profileSlice.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── contexts/       # React contexts
+│   │   │   │   ├── AuthContext.tsx
+│   │   │   │   ├── ThemeContext.tsx
+│   │   │   │   ├── NotificationContext.tsx
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── models/             # TypeScript types and interfaces
+│   │   │   ├── auth/           # Auth types
+│   │   │   │   ├── User.ts
+│   │   │   │   ├── AuthTokens.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard types
+│   │   │   │   ├── LearningMetrics.ts
+│   │   │   │   ├── Progress.ts
+│   │   │   │   ├── Activity.ts
+│   │   │   │   ├── Leaderboard.ts
+│   │   │   │   ├── Achievement.ts
+│   │   │   │   ├── Recommendation.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── courses/        # Courses types
+│   │   │   │   ├── Course.ts
+│   │   │   │   ├── CourseDetails.ts
+│   │   │   │   ├── CourseProgress.ts
+│   │   │   │   ├── CourseReview.ts
+│   │   │   │   ├── Lesson.ts
+│   │   │   │   ├── Module.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── practice/       # Practice types
+│   │   │   │   ├── Problem.ts
+│   │   │   │   ├── ProblemDetails.ts
+│   │   │   │   ├── Submission.ts
+│   │   │   │   ├── TestCase.ts
+│   │   │   │   ├── DailyChallenge.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── community/      # Community types
+│   │   │   │   ├── Discussion.ts
+│   │   │   │   ├── StudyGroup.ts
+│   │   │   │   ├── Event.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── profile/        # Profile types
+│   │   │   │   ├── Profile.ts
+│   │   │   │   ├── Goal.ts
+│   │   │   │   ├── Certificate.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── common/         # Common types
+│   │   │   │   ├── ApiResponse.ts
+│   │   │   │   ├── PaginatedResponse.ts
+│   │   │   │   ├── FilterOptions.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── utils/              # Utility functions
+│   │   │   ├── auth/           # Auth utilities
+│   │   │   │   ├── tokenUtils.ts
+│   │   │   │   ├── authUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard utilities
+│   │   │   │   ├── metricsUtils.ts
+│   │   │   │   ├── progressUtils.ts
+│   │   │   │   ├── dateUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── courses/        # Courses utilities
+│   │   │   │   ├── courseUtils.ts
+│   │   │   │   ├── progressUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── practice/       # Practice utilities
+│   │   │   │   ├── problemUtils.ts
+│   │   │   │   ├── codeUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── community/      # Community utilities
+│   │   │   │   ├── discussionUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── profile/        # Profile utilities
+│   │   │   │   ├── profileUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── common/         # Common utilities
+│   │   │   │   ├── formatUtils.ts
+│   │   │   │   ├── validationUtils.ts
+│   │   │   │   ├── stringUtils.ts
+│   │   │   │   ├── numberUtils.ts
+│   │   │   │   ├── dateUtils.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── data/               # Static data and content
+│   │   │   ├── auth/           # Auth data
+│   │   │   │   ├── loginContent.ts
+│   │   │   │   ├── registerContent.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard data
+│   │   │   │   ├── metricsLabels.ts
+│   │   │   │   ├── goalsContent.ts
+│   │   │   │   ├── achievementsContent.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── courses/        # Courses data
+│   │   │   │   ├── courseCategories.ts
+│   │   │   │   ├── courseLevels.ts
+│   │   │   │   ├── courseTags.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── practice/       # Practice data
+│   │   │   │   ├── problemCategories.ts
+│   │   │   │   ├── problemLevels.ts
+│   │   │   │   ├── problemTags.ts
+│   │   │   │   ├── companies.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── community/      # Community data
+│   │   │   │   ├── discussionCategories.ts
+│   │   │   │   ├── eventTypes.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── profile/        # Profile data
+│   │   │   │   ├── profileFields.ts
+│   │   │   │   ├── goalTemplates.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── common/         # Common data
+│   │   │   │   ├── navigationItems.ts
+│   │   │   │   ├── footerLinks.ts
+│   │   │   │   ├── socialLinks.ts
+│   │   │   │   ├── errorMessages.ts
+│   │   │   │   ├── successMessages.ts
+│   │   │   │   ├── placeholderTexts.ts
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── config/             # Configuration files
+│   │   │   ├── firebase.ts     # Firebase configuration
+│   │   │   ├── constants.ts    # App constants
+│   │   │   ├── routes.ts       # Route constants
+│   │   │   ├── theme.ts        # Theme configuration
+│   │   │   ├── validation.ts   # Validation rules
+│   │   │   └── index.ts
+│   │   │
+│   │   └── assets/             # Frontend assets
+│   │       ├── images/         # Image assets
+│   │       ├── icons/          # Icon assets
+│   │       └── fonts/          # Font assets
+│   │
+│   ├── .env.local              # Environment variables
+│   ├── .env.example            # Example environment variables
+│   ├── next.config.js          # Next.js configuration
+│   ├── tailwind.config.js      # Tailwind CSS configuration
+│   ├── tsconfig.json           # TypeScript configuration
+│   ├── package.json            # Frontend dependencies
+│   └── README.md               # Frontend documentation
+│
+├── backend/                    # Backend application (Python)
+│   ├── app/                    # Main application package
+│   │   ├── __init__.py
+│   │   │
+│   │   ├── main.py             # Application entry point
+│   │   │
+│   │   ├── api/                # API layer
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── deps.py         # API dependencies
+│   │   │   │
+│   │   │   ├── v1/             # API version 1
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── router.py   # Main router
+│   │   │   │   │
+│   │   │   │   ├── endpoints/  # API endpoints
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │
+│   │   │   │   │   ├── auth.py
+│   │   │   │   │   ├── dashboard.py
+│   │   │   │   │   ├── courses.py
+│   │   │   │   │   ├── course_details.py
+│   │   │   │   │   ├── topics.py
+│   │   │   │   │   ├── problems.py
+│   │   │   │   │   ├── submissions.py
+│   │   │   │   │   ├── community.py
+│   │   │   │   │   ├── discussions.py
+│   │   │   │   │   ├── profile.py
+│   │   │   │   │   ├── users.py
+│   │   │   │   │   ├── achievements.py
+│   │   │   │   │   ├── leaderboard.py
+│   │   │   │   │   ├── notifications.py
+│   │   │   │   │   ├── search.py
+│   │   │   │   │   └── health.py
+│   │   │   │   │
+│   │   │   │   └── schemas/     # API schemas (request/response)
+│   │   │   │       ├── __init__.py
+│   │   │   │       │
+│   │   │   │       ├── auth.py
+│   │   │   │       ├── dashboard.py
+│   │   │   │       ├── courses.py
+│   │   │   │       ├── topics.py
+│   │   │   │       ├── problems.py
+│   │   │   │       ├── submissions.py
+│   │   │   │       ├── community.py
+│   │   │   │       ├── profile.py
+│   │   │   │       ├── users.py
+│   │   │   │       ├── achievements.py
+│   │   │   │       ├── leaderboard.py
+│   │   │   │       ├── notifications.py
+│   │   │   │       └── common.py
+│   │   │   │
+│   │   │   └── v2/             # API version 2 (future)
+│   │   │       └── __init__.py
+│   │   │
+│   │   ├── core/               # Core functionality
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── config.py       # Application configuration
+│   │   │   ├── security.py     # Security utilities
+│   │   │   ├── firebase.py     # Firebase configuration
+│   │   │   ├── exceptions.py   # Custom exceptions
+│   │   │   ├── logging.py      # Logging configuration
+│   │   │   └── middleware.py   # Custom middleware
+│   │   │
+│   │   ├── modules/            # Business modules
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── auth/           # Authentication module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── dependencies.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── courses/        # Courses module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── topics/         # Topics module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── problems/       # Problems module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── submissions/    # Submissions module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   ├── code_executor.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── community/      # Community module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── profile/        # Profile module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── users/          # Users module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── achievements/   # Achievements module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── leaderboard/    # Leaderboard module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── notifications/  # Notifications module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   ├── schemas.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   ├── search/         # Search module
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── repository.py
+│   │   │   │   └── utils.py
+│   │   │   │
+│   │   │   └── ai/             # AI/Recommendations module
+│   │   │       ├── __init__.py
+│   │   │       ├── service.py
+│   │   │       ├── repository.py
+│   │   │       ├── schemas.py
+│   │   │       └── utils.py
+│   │   │
+│   │   ├── data/               # Data layer
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── models/         # Database models
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── user.py
+│   │   │   │   ├── course.py
+│   │   │   │   ├── topic.py
+│   │   │   │   ├── problem.py
+│   │   │   │   ├── submission.py
+│   │   │   │   ├── discussion.py
+│   │   │   │   ├── achievement.py
+│   │   │   │   ├── notification.py
+│   │   │   │   ├── certificate.py
+│   │   │   │   ├── goal.py
+│   │   │   │   └── base.py
+│   │   │   │
+│   │   │   ├── repositories/   # Data repositories
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── base.py
+│   │   │   │   ├── user.py
+│   │   │   │   ├── course.py
+│   │   │   │   ├── topic.py
+│   │   │   │   ├── problem.py
+│   │   │   │   ├── submission.py
+│   │   │   │   ├── discussion.py
+│   │   │   │   ├── achievement.py
+│   │   │   │   ├── notification.py
+│   │   │   │   └── certificate.py
+│   │   │   │
+│   │   │   ├── seeders/        # Data seeders
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── courses.py
+│   │   │   │   ├── problems.py
+│   │   │   │   ├── users.py
+│   │   │   │   └── achievements.py
+│   │   │   │
+│   │   │   └── migrations/     # Database migrations
+│   │   │       ├── __init__.py
+│   │   │       │
+│   │   │       └── versions/
+│   │   │           └── __init__.py
+│   │   │
+│   │   ├── services/          # External services
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── firebase/      # Firebase services
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── auth.py
+│   │   │   │   ├── firestore.py
+│   │   │   │   └── storage.py
+│   │   │   │
+│   │   │   ├── email/         # Email services
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   └── email_service.py
+│   │   │   │
+│   │   │   ├── code_executor/ # Code execution services
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── docker_executor.py
+│   │   │   │   └── sandbox.py
+│   │   │   │
+│   │   │   └── ai/            # AI services
+│   │   │       ├── __init__.py
+│   │   │       │
+│   │   │       └── recommendation_engine.py
+│   │   │
+│   │   ├── utils/             # Utility functions
+│   │   │   ├── __init__.py
+│   │   │   │
+│   │   │   ├── auth/           # Auth utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── token_utils.py
+│   │   │   │   ├── password_utils.py
+│   │   │   │   └── firebase_utils.py
+│   │   │   │
+│   │   │   ├── dashboard/      # Dashboard utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── metrics_utils.py
+│   │   │   │   └── progress_utils.py
+│   │   │   │
+│   │   │   ├── courses/        # Courses utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   └── course_utils.py
+│   │   │   │
+│   │   │   ├── practice/       # Practice utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── problem_utils.py
+│   │   │   │   └── code_utils.py
+│   │   │   │
+│   │   │   ├── community/      # Community utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   └── discussion_utils.py
+│   │   │   │
+│   │   │   ├── profile/        # Profile utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   └── profile_utils.py
+│   │   │   │
+│   │   │   ├── common/         # Common utilities
+│   │   │   │   ├── __init__.py
+│   │   │   │   │
+│   │   │   │   ├── date_utils.py
+│   │   │   │   ├── string_utils.py
+│   │   │   │   ├── validation_utils.py
+│   │   │   │   ├── pagination_utils.py
+│   │   │   │   └── response_utils.py
+│   │   │   │
+│   │   │   └── index.py
+│   │   │
+│   │   └── tests/             # Tests
+│   │       ├── __init__.py
+│   │       │
+│   │       ├── conftest.py    # Test configuration
+│   │       │
+│   │       ├── unit/          # Unit tests
+│   │       │   ├── __init__.py
+│   │       │   │
+│   │       │   ├── test_auth.py
+│   │       │   ├── test_dashboard.py
+│   │       │   ├── test_courses.py
+│   │       │   ├── test_topics.py
+│   │       │   ├── test_problems.py
+│   │       │   ├── test_submissions.py
+│   │       │   ├── test_community.py
+│   │       │   ├── test_profile.py
+│   │       │   └── test_users.py
+│   │       │
+│   │       ├── integration/   # Integration tests
+│   │       │   ├── __init__.py
+│   │       │   │
+│   │       │   ├── test_auth_flow.py
+│   │       │   ├── test_course_flow.py
+│   │       │   ├── test_problem_flow.py
+│   4       │   └── test_community_flow.py
+│   │       │
+│   │       └── e2e/           # End-to-end tests
+│   │           ├── __init__.py
+│   │           │
+│   │           └── test_full_flow.py
+│   │
+│   ├── .env                    # Environment variables
+│   ├── .env.example            # Example environment variables
+│   ├── requirements.txt        # Python dependencies
+│   ├── pyproject.toml          # Python project configuration
+│   ├── Dockerfile              # Docker configuration
+│   ├── docker-compose.yml      # Docker Compose configuration
+│   └── README.md               # Backend documentation
+│
+│
+├── scripts/                    # Utility scripts
+│   ├── setup.sh                # Project setup script
+│   ├── seed_data.py            # Data seeding script
+│   ├── run_tests.sh            # Test runner script
+│   └── deploy.sh               # Deployment script
+│
+├── .gitignore                  # Git ignore file
+├── .env.example                # Example environment variables
+├── README.md                   # Project README
+└── LICENSE                     # Project license

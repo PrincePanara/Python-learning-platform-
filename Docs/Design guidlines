@@ -1,0 +1,113 @@
+YourLearner Design Guidelines
+Design Philosophy
+Modern
+Minimal
+Clean
+Professional
+User-Centric
+Consistent
+Responsive
+Accessible
+Color Palette
+
+Primary Color
+
+Blue (#2F6BFF)
+
+Background
+
+White (#FFFFFF)
+
+Secondary Background
+
+Light Gray (#F8FAFC)
+
+Text
+
+Primary: Dark Gray
+Secondary: Gray
+
+Status Colors
+
+Success: Green
+Warning: Orange
+Error: Red
+Info: Blue
+Typography
+
+Font Family
+
+Inter
+
+Font Weights
+
+Regular (400)
+Medium (500)
+SemiBold (600)
+Bold (700)
+Border Radius
+Cards: Large
+Buttons: Medium
+Inputs: Medium
+Badges: Full Rounded
+Shadows
+Soft
+Minimal
+Consistent
+Layout
+Sidebar Navigation
+Top Navigation Bar
+Card-Based Dashboard
+Responsive Grid Layout
+Spacious White Space
+Components
+Cards
+Buttons
+Input Fields
+Search Bar
+Sidebar
+Navigation Bar
+Progress Bars
+Charts
+Badges
+Avatars
+Tooltips
+Modals
+Dropdowns
+Toast Notifications
+Button Style
+Primary Button
+Secondary Button
+Outline Button
+Icon Button
+Disabled Button
+Card Style
+White Background
+Rounded Corners
+Soft Shadow
+Consistent Padding
+Minimal Border
+Icons
+Outline Style
+Consistent Size
+Minimal Design
+Animations
+Smooth Transitions
+Fade Animation
+Slide Animation
+Hover Effects
+Loading Animation
+Progress Animation
+Spacing System
+8px Grid System
+Consistent Margins
+Consistent Padding
+Design Principles
+Consistent Design Language
+Clean Interface
+Reusable Components
+Clear Visual Hierarchy
+Easy Navigation
+High Readability
+Scalable Design System
+Responsive Across All Devices

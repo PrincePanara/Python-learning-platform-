@@ -1,0 +1,224 @@
+## Page Name: Dashboard
+# Page Requirements:
+Display a personalized greeting and learning status.
+Show key learning metrics and progress summaries.
+Provide quick access to continue learning or explore courses.
+Present recent activity and achievements.
+Offer insights into daily goals, learning streaks, and XP earned.
+Include visual analytics for weekly and monthly activity.
+Display a leaderboard to compare performance with peers.
+Provide AI-driven course recommendations.
+Allow users to view and track their learning progress across multiple subjects.
+Support navigation to other sections of the platform.
+Page Functionalities:
+Personalized user greeting and learning status message.
+Quick action buttons: "Continue Learning" and "View All Courses".
+Display of key metrics: courses learned, lessons completed, problems solved, streak days, XP earned, and total rank.
+"Continue Learning" section with in-progress course details and progress percentage.
+Learning progress tracking for multiple subjects (e.g., Python, Java, C++).
+Daily goal tracking with completion status (e.g., solve 5 problems, complete 1 quiz).
+Activity calendar showing daily engagement over the past year.
+Weekly analytics chart displaying time spent, XP gained, and problems solved.
+Leaderboard showing top users and the current user’s rank.
+Recent activity log listing completed tasks, earned XP, and milestones.
+Achievements section with badges for milestones (e.g., 7-day streak, first certificate).
+AI recommendation system suggesting next learning steps.
+Navigation sidebar linking to Courses, Practice, Community, Profile, and Settings.
+Integration with calendar apps for scheduling learning sessions.
+Logout functionality.
+
+
+
+
+
+
+## Page Name: Courses
+
+### Page Requirements:
+Display a list of all available courses with relevant metadata.
+Allow users to view and manage their enrolled courses.
+Enable filtering and sorting of courses based on various criteria.
+Provide course progress tracking for enrolled users.
+Offer recommendations based on user interests or learning history.
+Support search functionality to find specific courses.
+Allow users to continue learning from where they left off.
+Display course ratings, difficulty levels, and completion status.
+Show course categories and tags for better organization.
+Provide access to course details and enrollment options.
+Page Functionalities:
+"My Courses" section showing currently enrolled courses with progress indicators.
+"All Courses" section displaying a grid of available courses with thumbnails, titles, and metadata.
+Search bar to find courses by name or topic.
+Filter options by category (e.g., Programming, Web Development, AI, Cyber Security), difficulty (Beginner, Intermediate, Advanced), and status (Completed).
+Sort options: Favorites, Newest, Most Popular.
+Course cards showing title, instructor, rating, duration, lessons, and progress percentage.
+"Continue Learning" button to resume progress in enrolled courses.
+"Resume Python" button for quick access to in-progress courses.
+"Recommended for You" section with personalized course suggestions.
+Course difficulty labels (Beginner, Intermediate, Advanced).
+Course tags (e.g., Python, JavaScript, React, Docker, Kubernetes).
+Progress bars indicating completion percentage for each course.
+Navigation to course details or enrollment page.
+Responsive grid layout for course display.
+
+
+
+## Page Name: Course Details
+# Page Requirements:
+Display comprehensive information about a specific course.
+Show course progress and completion status for the user.
+Provide access to course content and curriculum.
+Allow users to resume learning from the last accessed point.
+Display instructor information and course ratings.
+Offer options to share the course with others.
+Present student reviews and feedback.
+Show course duration, difficulty level, and enrollment statistics.
+Provide a clear overview of what the course covers and learning outcomes.
+Enable navigation to individual lessons or modules.
+Page Functionalities:
+Course title, description, and learning objectives.
+Course progress indicator showing overall completion percentage.
+"Resume Learning" button to continue from the last accessed lesson.
+Course metadata: rating, number of students, lessons, duration, and instructor.
+Instructor profile with name, title, and number of students taught.
+"Share this Course" functionality with social media and link options.
+"About this Course" section outlining key skills and outcomes.
+Expandable course curriculum with modules, lessons, and estimated durations.
+Checkmarks indicating completed lessons.
+"Student Reviews" section with ratings, comments, and timestamps.
+Course difficulty label (e.g., Beginner).
+Course tags (e.g., Python).
+Certificate of Completion eligibility and requirements.
+Estimated time to complete the course.
+Navigation breadcrumb (e.g., My Courses > Python for Beginners).
+
+
+## Page Name: Study Topic
+# Page Requirements:
+Provide a comprehensive learning environment for a specific topic.
+Display learning objectives and key concepts.
+Offer interactive examples and practice exercises.
+Include quizzes to test understanding.
+include compliler with run and working.
+Provide access to additional resources and documentation.
+Enable user interaction through discussions and comments.
+Track user progress and achievements.
+Display XP earned, daily goals, and leaderboard rankings.
+Allow users to save notes and take quizzes.
+Support navigation to previous or next topics.
+Page Functionalities:
+Topic title and description.
+Learning objectives with checkmarks for completion.
+Key concepts with definitions and explanations.
+Interactive code example with input/output demonstration.
+Practice exercise with problem statement and solution options.
+Quiz section with multiple-choice questions and answer submission.
+Resources section with links to cheat sheets, videos, documentation, and code repositories.
+Discussion forum for user questions and instructor responses.
+User progress tracking (e.g., 22% completed).
+XP earned and daily goal tracking.
+Achievements display (e.g., 7-day streak, first certificate).
+Weekly progress chart.
+Leaderboard showing user rankings.
+"Get Certificate" button for course completion.
+Navigation buttons for previous and next topics.
+Options to save notes, take quiz, and mark complete.
+User profile and XP display.
+
+
+## Page Name: Practice Problem List
+# Page Requirements:
+Display a comprehensive list of coding problems for practice.
+Allow users to filter and sort problems based on various criteria.
+Show problem difficulty, acceptance rate, tags, company associations, time estimates, and XP rewards.
+Enable users to solve problems directly from the list.
+Provide access to daily challenges and upcoming contests.
+Display user progress, achievements, and leaderboard rankings.
+Offer search functionality to find specific problems.
+Show recent activity and recommended problems based on user performance.
+Page Functionalities:
+Problem list with columns for status, title, difficulty, acceptance rate, tags, company, time, and XP.
+Filter options by difficulty (Easy, Medium, Hard), status (All, Solved, Attempted, Unsolved, Bookmarked), topics (Array, Strings, Hash Map, etc.), and companies (Google, Microsoft, Amazon, etc.).
+Sort options: Newest, Popularity, Acceptance Rate.
+Search bar to find problems by name or keyword.
+"Solve" button for each problem to start coding.
+Daily Challenge section with a featured problem and "Start" button.
+Next Contest section with countdown timer and registration option.
+Achievements display (e.g., 14-day streak, 100 problems solved).
+Recommended problems based on user performance.
+Leaderboard showing top users and the current user’s rank.
+Recent activity log listing solved and attempted problems.
+User profile with XP earned, global rank, and total problems solved.
+Progress tracking (e.g., 3/5 problems solved this week).
+XP earned and daily goal tracking.
+Navigation to other sections (Problems, Contests, Discuss, Interview Prep).
+
+
+## Page Name: Problem Solving Workspace
+# Page Requirements:
+Provide an interactive coding environment for solving problems.
+Display the problem description, examples, and constraints.
+Allow users to write, test, and submit code solutions.
+Show real-time feedback on code execution and test case results.
+Enable users to view and manage their submissions.
+Provide access to editorial solutions and discussions.
+Support multiple programming languages.
+Display runtime and memory usage for submitted code.
+Allow users to take notes and save progress.
+Enable navigation to related problems or topics.
+Page Functionalities:
+Problem title, difficulty level, and acceptance rate.
+Problem description with examples and constraints.
+Code editor with syntax highlighting and auto-completion.
+Language selection (e.g., Python3).
+"Test" button to run code against sample test cases.
+"Submit" button to submit the solution for evaluation.
+Test case section showing input and expected output.
+Real-time feedback on code execution (e.g., "Accepted").
+Runtime and memory usage display.
+Navigation tabs: Description, Notes, Submissions, Editorial, Discussion.
+Back button to return to the problem list.
+Timer to track time spent on the problem.
+User profile and XP display.
+Access to related problems or topics.
+
+## Page Name: Community
+Page Requirements:
+Provide a platform for learners to connect, collaborate, and grow.
+Display discussions, study groups, events, and leaderboards.
+Allow users to search and filter discussions by topic, category, and status.
+Enable users to start new discussions and participate in existing ones.
+Show top categories and trending discussions.
+Provide access to study groups and events.
+Display user profiles and learning progress.
+Offer navigation to other sections of the platform.
+Page Functionalities:
+Community title and description.
+Navigation tabs: Discussions, Study Groups, Events, Leaderboards.
+Search bar to find discussions by keyword.
+"Start Discussion" button to create a new discussion.
+List of discussions with titles, categories, authors, timestamps, replies count, views count
+
+
+
+## Page Name: User Profile
+Page Requirements:
+Display user profile information, including name, role, and learning interests.
+Show user achievements, such as courses completed, study hours, topics mastered, problems solved, certificates earned, and community contributions.
+Provide access to user certificates, badges, goals, and contributions.
+Allow users to edit their profile and share it with others.
+Display active goals and progress tracking.
+Provide account settings, preferences, and privacy options.
+Enable users to manage their email, phone number, password, and language settings.
+Offer options to delete the account and associated data.
+Page Functionalities:
+User profile section with name, role, learning interests, and profile picture.
+"Edit Profile" and "Share Profile" buttons.
+Achievements section displaying courses completed, total study hours, topics mastered, problems solved, certificates earned, and community contributions.
+Certificates section with links to view certificates for completed courses.
+Active Goals section with progress tracking for goals such as mastering algorithms, building projects, and reading books.
+Account Settings section for managing email, phone number, and password.
+Preferences section for language, theme, and notification settings.
+Privacy section for profile visibility, showing achievements, and two-factor authentication.
+"Delete Account" option to permanently delete the account and associated data.
+Navigation to other sections of the platform.
