@@ -1,0 +1,258 @@
+Design a premium, modern, fully responsive, and interactive Course Page for "YourLearner" — a learning platform for programming education. Create a high-fidelity UI/UX prototype only (no backend implementation required).
+
+Design Goals:
+
+Clean, modern, engaging, and distraction-free learning experience
+Similar quality to Codecademy, Scrimba, DataCamp, freeCodeCamp, Coursera, and Duolingo
+Unique identity for YourLearner with its own branding
+Beautiful spacing, rounded cards, smooth animations, meaningful icons, and intuitive layout
+Pages & Sections to Design:
+
+1. Course Landing Page
+
+Large page title and motivational subtitle
+Overall learning progress and current streak display
+Search bar and filter options
+"Continue Learning" button
+Two large learning path cards (Beginner & Intermediate) showing:
+Path icon, description, total topics, estimated duration, difficulty, progress, and continue button
+2. Topic List View
+
+Complete list of topics for selected learning path
+Each topic card shows: icon, title, description, estimated time, difficulty, completion status, lock/unlock status, progress, and continue button
+Locked topics appear disabled until previous assessment is passed
+3. Learning Page (Split Interface)
+
+Left Side: Lesson content including:
+Topic title, introduction, learning objectives, key concepts, detailed explanation, step-by-step examples, Python syntax, visual diagrams, flowcharts, best practices, common mistakes, tips, real-world examples, summary
+Previous/Next topic navigation
+Right Side: Sticky Python Compiler with:
+Code editor with syntax highlighting, run button, reset button, copy code, output console
+4. Notes Section
+
+Read/write/edit/save personal notes
+Future: download notes, export PDF
+5. Quiz Section
+
+Multiple choice questions with one correct answer
+Instant feedback, correct answer explanation, quiz score, progress indicator
+6. Topic Assessment
+
+7 questions total, minimum 6 correct to pass
+Pass: unlock next topic | Fail: keep locked
+Show: "You need at least 6 correct answers to unlock the next lesson."
+Options: Review Lesson, Retry Assessment
+7. Resources Section
+
+Official documentation, helpful articles, video tutorials, practice websites, cheat sheets, downloadable PDFs, GitHub repository
+8. Course Progress Dashboard
+
+Overall progress, completed/remaining topics, current topic, quiz scores, assessment status, completion percentage
+9. Sidebar (Sticky)
+
+Course overview, topic list, notes, quiz, assessment, resources, progress
+Current topic highlighted
+10. Header
+
+Topic title, breadcrumb navigation, search, profile, notifications, current progress
+11. Footer
+
+Previous topic, next topic, mark as completed, back to course
+UI Style Requirements:
+
+Modern cards, rounded corners, soft shadows, premium typography, blue gradient accents, meaningful icons, smooth hover effects, page transitions, micro-interactions, loading animations, responsive design, dark/light mode ready, sticky navigation, beautiful empty states, modern progress bars, animated circular progress, clean layout, excellent spacing, minimal design
+User Experience Goals:
+
+Premium and interactive feel
+Never overwhelming
+Distraction-free reading
+Compiler always accessible while studying
+Smooth navigation between topics
+Clear understanding of completed vs. remaining work
+Important:
+
+Build only the complete UI/UX prototype
+Use realistic placeholder data
+Every button, card, modal, tab, and interaction should appear fully functional
+Maintain consistent design system across entire Course module
+Ensure design is scalable for adding more programming languages
+Final result should feel like a polished, production-ready learning platform
+ADDITIONAL SUGGESTIONS & IMPROVEMENTS
+Here are features and improvements you may have missed that will make your course page even better:
+
+1. Course Landing Page Enhancements
+Add a course preview video or animated intro
+Show student enrollment count and rating
+Include "What you'll learn" bullet points
+Add prerequisites section
+Show instructor profile with photo and bio
+Include student testimonials or success stories
+Add "Last updated" date for course content
+Show certificate of completion preview
+2. Topic List Enhancements
+Add topic search/filter within the list
+Show topic dependencies (visual连接线 between prerequisites)
+Add topic type icons (video, reading, practice, project)
+Include "Mark as Complete" button for each topic
+Show time spent per topic
+Add bookmark/favorite topics feature
+Include topic difficulty rating from students
+Show completion date for finished topics
+3. Learning Page Enhancements
+Add table of contents within the lesson for quick navigation
+Include reading progress indicator (scroll progress bar)
+Add font size controls for accessibility
+Include "Copy code snippet" buttons for all code examples
+Add inline code execution (run code blocks directly in lesson)
+Include diagram zoom functionality
+Add dark/light mode toggle for code editor
+Show estimated reading time for lesson
+Include "Ask AI" button for questions about the lesson
+Add highlight/annotate text feature
+Include lesson audio (text-to-speech option)
+4. Python Compiler Enhancements
+Add auto-save for code
+Include code templates or boilerplate
+Add multiple file support (tabs)
+Include code formatting button
+Add keyboard shortcuts (Ctrl+Enter to run)
+Include error highlighting with helpful messages
+Add code sharing feature
+Include version history for code
+Add fullscreen mode for editor
+Include theme selector for editor (VS Code, GitHub, etc.)
+5. Notes Section Enhancements
+Add rich text formatting (bold, italic, lists, code blocks)
+Include note templates (summary, questions, key takeaways)
+Add note tagging for organization
+Include search within notes
+Add note sharing with other students
+Include note export (Markdown, PDF, TXT)
+Add note version history
+Include voice notes option
+Add note pinning for important notes
+6. Quiz Enhancements
+Add question flagging for review
+Include question navigation (jump to any question)
+Add time limit option for quizzes
+Include question difficulty indicators
+Add explanation toggle for each answer
+Include quiz retry with different questions
+Add quiz statistics (accuracy, time per question)
+Include confidence rating for each answer
+Add quiz review mode after completion
+7. Assessment Enhancements
+Add assessment timer
+Include question randomization
+Add partial credit for some questions
+Include assessment history (previous attempts)
+Add weak area identification based on assessment results
+Include study recommendations after failing
+Add celebration animation for passing
+Include certificate preview for course completion
+8. Resources Enhancements
+Add resource rating system
+Include resource type icons (video, article, tool, etc.)
+Add "Open in new tab" option
+Include resource description and estimated time
+Add resource bookmarking
+Include community-recommended resources
+Add resource search/filter
+Include offline download option
+9. Progress Tracking Enhancements
+Add learning streak calendar (GitHub-style heatmap)
+Include time spent learning statistics
+Add skill radar chart showing strengths/weaknesses
+Include learning velocity (topics per week)
+Add projected completion date
+Include comparison with average student
+Add milestone celebrations
+Include progress sharing to social media
+10. Sidebar Enhancements
+Add sidebar collapse/expand toggle
+Include quick navigation to any topic
+Add section progress indicators
+Include bookmark quick access
+Add recent activity feed
+Include quick notes access
+Add search within course
+Include download course content option
+11. Header Enhancements
+Add breadcrumb with dropdown navigation
+Include quick settings (theme, font size)
+Add notification center with categories
+Include quick profile menu
+Add global search with keyboard shortcut
+Include help/FAQ access
+Add feedback button
+Include offline indicator
+12. Footer Enhancements
+Add keyboard shortcut hints
+Include progress percentage
+Add estimated time to complete
+Include "Ask Community" button
+Add report issue option
+Include accessibility controls
+Add language selector
+Include version info
+13. Additional Features to Consider
+Gamification
+XP points for completing lessons
+Achievement badges for milestones
+Learning streaks with rewards
+Leaderboard for course progress
+Level system for students
+Social Learning
+Study groups for the course
+Discussion forums per topic
+Peer code review
+Collaborative projects
+Mentor matching
+Personalization
+Adaptive learning paths
+Difficulty adjustment based on performance
+Personalized study reminders
+Custom learning schedules
+Interest-based content recommendations
+Accessibility
+Screen reader support
+Keyboard navigation
+High contrast mode
+Font size adjustment
+Captions for videos
+Transcripts for audio
+Mobile Experience
+Swipe navigation between topics
+Offline content download
+Mobile-optimized code editor
+Push notifications for reminders
+Quick practice mode
+Analytics for Students
+Time spent per topic
+Quiz performance trends
+Strengths and weaknesses
+Learning pattern insights
+Improvement suggestions
+QUICK IMPROVEMENT CHECKLIST
+Area	Quick Wins
+Landing Page	Add preview video, ratings, "What you'll learn"
+Topic List	Add search, bookmarks, time tracking
+Learning Page	Add reading progress, font controls, AI assistant
+Compiler	Add auto-save, templates, error highlighting
+Notes	Add rich text, tags, export options
+Quiz	Add flagging, timer, review mode
+Progress	Add heatmap, velocity, projected completion
+Sidebar	Add collapse, quick nav, recent activity
+Mobile	Add swipe, offline, push notifications
+HOW TO USE THIS
+Copy the Professional Prompt and use it with:
+AI design tools (Midjourney, DALL-E for concepts)
+UI/UX platforms (Figma, Adobe XD, Sketch)
+Design agencies or freelancers
+AI coding tools (v0.dev, Lovable, Bolt.new)
+Review the Suggestions and pick the ones that fit your vision
+Prioritize based on your development timeline:
+Must-have: Core learning experience
+Should-have: Progress tracking, notes, quiz
+Nice-to-have: Gamification, social features, AI assistant
+Test with users before finalizing the design

@@ -1,0 +1,466 @@
+
+Python Programming
+A Complete Step-by-Step Guide
+From Basics to Advanced – Concepts, Key Points, Examples & Practice Questions
+
+Table of Contents
+
+
+
+1. What is Python?
+Python is a high-level, easy-to-read programming language created by Guido van Rossum in 1991. It is used for web development, data science, automation, AI, and much more because its syntax looks close to plain English.
+Key Points
+	•	Python is interpreted (runs line by line, no separate compile step for the user).
+	•	It is dynamically typed (you don't need to declare variable types).
+	•	It has a huge standard library and third-party package ecosystem (pip).
+	•	It works on Windows, macOS, and Linux.
+	•	Used in web apps, data science, AI/ML, automation, and scripting.
+Example
+# A one-line taste of Python
+print("Python is easy to read and write!")
+
+Practice Questions
+1. In your own words, explain why Python is called a 'high-level' language.
+2. List three real-world fields where Python is commonly used.
+
+2. Install Python
+Before writing code you need Python installed on your computer, along with a code editor to write it in.
+Key Points
+	•	Download Python from the official site: python.org/downloads.
+	•	During installation on Windows, tick 'Add Python to PATH'.
+	•	Verify installation by opening a terminal/command prompt and typing: python --version
+	•	Use pip (comes bundled with Python) to install extra packages: pip install package_name
+	•	A good free editor to start with is VS Code, but IDLE (comes with Python) also works.
+Example
+# Run this in your terminal, not in a .py file
+python --version
+pip --version
+
+Practice Questions
+1. What command checks which version of Python is installed?
+2. Why is it important to tick 'Add Python to PATH' during installation on Windows?
+
+3. Your First Python Program
+Tradition says every programmer's first program prints 'Hello, World!' to the screen. In Python this takes just one line using the print() function.
+Key Points
+	•	print() displays output on the screen.
+	•	Python files are saved with a .py extension, e.g. hello.py
+	•	Run a file from the terminal using: python hello.py
+	•	Python does not need semicolons at the end of lines.
+	•	Indentation (spaces) matters in Python — it defines code blocks.
+Example
+# hello.py
+print("Hello, World!")
+print("I am learning Python.")
+
+Practice Questions
+1. Write a program that prints your name and your favorite hobby on two separate lines.
+2. What happens if you forget to add quotes around text inside print()? Try it and explain the error.
+
+4. Variables
+A variable is a name that stores a value in memory so you can reuse or change it later. Python variables do not need a declared type — Python figures it out automatically.
+Key Points
+	•	Create a variable with: name = value
+	•	Variable names can contain letters, numbers, and underscores, but cannot start with a number.
+	•	Variable names are case-sensitive (age and Age are different).
+	•	You can reassign a variable to a new value at any time.
+	•	Use meaningful names like student_age instead of x for readable code.
+Example
+name = "Riya"
+age = 21
+height = 5.4
+ 
+print(name, age, height)
+ 
+age = 22   # reassigning
+print(age)
+
+Practice Questions
+1. Create three variables: your name, your age, and your city, then print them together in one sentence.
+2. What will be printed if you swap the values of two variables a = 5 and b = 10? Write the code to swap them.
+
+5. Data Types
+Every value in Python has a type. Common built-in types include integers, floating-point numbers, strings, booleans, lists, tuples, dictionaries, and sets.
+Key Points
+	•	int -> whole numbers, e.g. 10, -5
+	•	float -> decimal numbers, e.g. 3.14
+	•	str -> text, written in quotes, e.g. "hello"
+	•	bool -> True or False
+	•	Use type(variable) to check a variable's data type.
+	•	Convert between types using int(), float(), str(), bool().
+Example
+age = 21          # int
+price = 99.99     # float
+name = "Amit"     # str
+is_student = True # bool
+ 
+print(type(age), type(price), type(name), type(is_student))
+ 
+# type conversion
+age_text = str(age)
+print(age_text, type(age_text))
+
+Practice Questions
+1. Create one variable of each type: int, float, str, bool, and print their types using type().
+2. Convert the string "45" into an integer and add 5 to it. Print the result.
+
+6. Input & Output
+input() lets a program take data typed by the user, and print() displays output. Data from input() always comes in as a string, so convert it if you need a number.
+Key Points
+	•	input("prompt") shows a message and waits for the user to type something.
+	•	input() always returns a string — use int() or float() to convert numbers.
+	•	print() can take multiple values separated by commas.
+	•	f-strings (f"...") let you insert variables directly into text.
+Example
+name = input("What is your name? ")
+age = int(input("What is your age? "))
+ 
+print(f"Hello {name}, next year you will be {age + 1} years old.")
+
+Practice Questions
+1. Write a program that asks the user for two numbers and prints their sum.
+2. Write a program that asks for a person's name and city, then prints: 'Riya lives in Mumbai.' using an f-string.
+
+7. Operators
+Operators perform actions on values and variables. Python has arithmetic, comparison, logical, and assignment operators.
+Key Points
+	•	Arithmetic: +  -  *  /  // (floor division)  %  (modulus)  ** (power)
+	•	Comparison: ==  !=  >  <  >=  <=  (returns True/False)
+	•	Logical: and, or, not
+	•	Assignment: =  +=  -=  *=  /=
+	•	Operator precedence follows normal math rules (** first, then * / , then + -).
+Example
+a = 10
+b = 3
+ 
+print(a + b, a - b, a * b, a / b, a // b, a % b, a ** b)
+ 
+print(a > b and b > 0)   # logical
+print(a == 10)           # comparison
+
+Practice Questions
+1. Given a = 17 and b = 4, calculate and print the result of a // b and a % b. Explain the difference between them.
+2. Write a condition that checks if a number is between 1 and 100 (inclusive) using logical operators.
+
+8. If-Else Statements
+if-elif-else lets your program make decisions and run different code depending on a condition.
+Key Points
+	•	if condition: runs a block only if the condition is True.
+	•	elif checks another condition if the previous one was False.
+	•	else runs when none of the above conditions were True.
+	•	Indentation defines which lines belong to the if/elif/else block.
+	•	Conditions typically use comparison or logical operators.
+Example
+marks = 75
+ 
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+
+Practice Questions
+1. Write a program that checks if a number is positive, negative, or zero.
+2. Write a program that takes a person's age as input and prints 'Minor' if under 18, 'Adult' if 18-59, and 'Senior' if 60 or above.
+
+9. Loops
+Loops let you repeat a block of code multiple times. Python has two main loop types: for (loop a known number of times, or over a sequence) and while (loop while a condition stays True).
+Key Points
+	•	for item in sequence: loops over lists, strings, or range().
+	•	range(start, stop, step) generates a sequence of numbers.
+	•	while condition: keeps looping as long as the condition is True.
+	•	break exits a loop immediately; continue skips to the next iteration.
+	•	Be careful with while loops — make sure the condition eventually becomes False to avoid infinite loops.
+Example
+# for loop
+for i in range(1, 6):
+    print("Count:", i)
+ 
+# while loop
+n = 5
+while n > 0:
+    print(n)
+    n -= 1
+
+Practice Questions
+1. Write a for loop that prints all even numbers from 1 to 20.
+2. Write a while loop that keeps asking the user to enter a number until they enter 0.
+
+10. Functions
+A function is a reusable block of code that performs a specific task. Functions help avoid repeating code and make programs easier to organize and test.
+Key Points
+	•	Define a function with: def function_name(parameters):
+	•	Call a function by writing its name followed by parentheses: function_name()
+	•	return sends a value back from the function to wherever it was called.
+	•	Parameters can have default values, e.g. def greet(name="Guest"):
+	•	Functions can take any number of arguments using *args and **kwargs.
+Example
+def add(a, b):
+    return a + b
+ 
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+ 
+result = add(5, 3)
+print(result)
+greet()
+greet("Neha")
+
+Practice Questions
+1. Write a function called is_even(number) that returns True if the number is even, otherwise False.
+2. Write a function calculate_area(length, width) that returns the area of a rectangle, then call it with two different sets of values.
+
+11. Lists
+A list is an ordered, changeable collection that can hold items of any type, written with square brackets.
+Key Points
+	•	Create a list: fruits = ["apple", "banana", "cherry"]
+	•	Access items by index: fruits[0] (indexing starts at 0).
+	•	Lists are mutable — you can change, add, or remove items.
+	•	Common methods: append(), remove(), insert(), sort(), pop(), len()
+	•	Slicing: fruits[1:3] gets a sub-list from index 1 up to (not including) 3.
+Example
+fruits = ["apple", "banana", "cherry"]
+ 
+fruits.append("mango")
+fruits.remove("banana")
+ 
+print(fruits)
+print(fruits[0])
+print(len(fruits))
+print(fruits[1:3])
+
+Practice Questions
+1. Create a list of 5 of your favorite movies, then add one more movie and remove one from the list.
+2. Write code that sorts a list of numbers [5, 2, 9, 1, 7] in ascending order and prints the largest number using indexing.
+
+12. Tuples
+A tuple is an ordered collection like a list, but it is immutable — once created, its values cannot be changed. Tuples are written with round brackets.
+Key Points
+	•	Create a tuple: point = (10, 20)
+	•	Tuples cannot be modified after creation (no append/remove).
+	•	Useful for fixed data that should not change, like coordinates or RGB colors.
+	•	Access items by index just like lists: point[0]
+	•	Tuples can be 'unpacked' into separate variables: x, y = point
+Example
+point = (10, 20)
+print(point[0], point[1])
+ 
+x, y = point
+print(f"x = {x}, y = {y}")
+ 
+colors = ("red", "green", "blue")
+print(len(colors))
+
+Practice Questions
+1. Create a tuple with your date of birth as (day, month, year) and print each part using unpacking.
+2. Explain in your own words: why would you choose a tuple over a list for storing a person's fixed birth date?
+
+13. Dictionaries
+A dictionary stores data as key-value pairs, letting you look up a value quickly using its key instead of a numeric index.
+Key Points
+	•	Create a dictionary: student = {"name": "Amit", "age": 21}
+	•	Access a value: student["name"] or student.get("name")
+	•	Add or update a key: student["grade"] = "A"
+	•	Remove a key: del student["age"]
+	•	Loop through it: for key, value in student.items():
+Example
+student = {"name": "Amit", "age": 21, "course": "Python"}
+ 
+print(student["name"])
+student["grade"] = "A"
+ 
+for key, value in student.items():
+    print(key, ":", value)
+
+Practice Questions
+1. Create a dictionary representing a book with keys title, author, and year, then print all three values.
+2. Write code that updates the year in your book dictionary and then removes the author key.
+
+14. Sets
+A set is an unordered collection of unique items — duplicates are automatically removed. Sets are useful for membership tests and removing duplicates.
+Key Points
+	•	Create a set: numbers = {1, 2, 3, 3, 2}  -> becomes {1, 2, 3}
+	•	Sets do not allow duplicate values and have no fixed order.
+	•	Add an item: numbers.add(4); remove: numbers.remove(2)
+	•	Set operations: union (|), intersection (&), difference (-)
+	•	Useful to quickly remove duplicates from a list: set(my_list)
+Example
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+ 
+print(a.union(b))
+print(a.intersection(b))
+print(a.difference(b))
+ 
+nums = [1, 2, 2, 3, 3, 3]
+unique = set(nums)
+print(unique)
+
+Practice Questions
+1. Given two sets of your friends' hobbies, find which hobbies are common to both using intersection.
+2. Write code to remove duplicate numbers from the list [4, 5, 5, 6, 7, 7, 8] using a set.
+
+15. Strings
+A string is a sequence of characters used to represent text. Python provides many built-in methods to work with strings.
+Key Points
+	•	Strings can use single or double quotes: 'hello' or "hello"
+	•	Strings are indexed like lists: name[0] gives the first character.
+	•	Common methods: upper(), lower(), strip(), replace(), split(), join()
+	•	Concatenate with +, or repeat with *: "ha" * 3 -> "hahaha"
+	•	f-strings let you embed variables/expressions: f"Hello {name}"
+Example
+name = "  Python Programming  "
+ 
+print(name.strip())
+print(name.upper())
+print(name.strip().lower())
+print(name.strip().replace("Python", "Java"))
+ 
+words = name.strip().split(" ")
+print(words)
+print("-".join(words))
+
+Practice Questions
+1. Take the string "  Learning Python is Fun  " and clean it up (remove extra spaces) then print it in all uppercase.
+2. Write code that counts how many times the letter 'a' appears in the word "banana".
+
+16. Files
+Python can read from and write to files on your computer, which is useful for saving data permanently. The open() function is used with modes like read ('r'), write ('w'), and append ('a').
+Key Points
+	•	open("file.txt", "w") opens (or creates) a file for writing.
+	•	Use with open(...) as f: so the file closes automatically.
+	•	f.write("text") writes text; f.read() reads the whole file.
+	•	"a" mode appends to a file instead of overwriting it.
+	•	f.readlines() returns a list of all lines in the file.
+Example
+# Writing to a file
+with open("notes.txt", "w") as f:
+    f.write("Hello, this is my first file.\n")
+    f.write("Python file handling is easy!")
+ 
+# Reading from a file
+with open("notes.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+Practice Questions
+1. Write a program that asks the user for 3 favorite quotes and saves each on a new line in a file called quotes.txt.
+2. Write a program that reads quotes.txt and prints the total number of lines in it.
+
+17. Modules
+A module is a file containing Python code (functions, variables) that you can reuse in other programs by importing it. Python also has many built-in modules like math, random, and datetime.
+Key Points
+	•	Import a whole module: import math
+	•	Import a specific function: from random import randint
+	•	Use an alias: import numpy as np
+	•	Create your own module by saving functions in a .py file and importing it by filename.
+	•	pip install lets you add third-party modules not built into Python.
+Example
+import math
+import random
+from datetime import date
+ 
+print(math.sqrt(16))
+print(random.randint(1, 10))
+print(date.today())
+
+Practice Questions
+1. Use the math module to calculate the square root of 144 and the value of pi.
+2. Use the random module to simulate rolling a six-sided die 5 times, printing each result.
+
+18. Object-Oriented Programming (OOP)
+OOP is a way of structuring programs around 'objects' that combine data (attributes) and behavior (methods). A class is a blueprint for creating objects.
+Key Points
+	•	Define a class: class ClassName:
+	•	__init__() is a special method that runs automatically when an object is created.
+	•	self refers to the current object instance inside the class.
+	•	Objects (instances) are created by calling the class like a function: obj = ClassName()
+	•	Key OOP concepts: encapsulation, inheritance, and polymorphism.
+Example
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+ 
+    def introduce(self):
+        print(f"Hi, I am {self.name} and I am {self.age} years old.")
+ 
+s1 = Student("Riya", 21)
+s1.introduce()
+ 
+class GraduateStudent(Student):   # inheritance
+    def introduce(self):
+        print(f"Hi, I am {self.name}, a graduate student.")
+ 
+s2 = GraduateStudent("Amit", 24)
+s2.introduce()
+
+Practice Questions
+1. Create a class Car with attributes brand and speed, and a method show_info() that prints them. Create two Car objects with different values.
+2. Create a class Animal with a method sound() that prints 'Some sound', then create a class Dog that inherits from Animal and overrides sound() to print 'Bark'.
+
+19. Projects (Practice Ideas)
+Applying everything you've learned in small projects is the best way to master Python. Here are a few beginner project ideas that combine multiple concepts from this guide.
+Key Points
+	•	Number Guessing Game — uses loops, if-else, and the random module.
+	•	To-Do List App — uses lists, functions, and file handling to save tasks.
+	•	Simple Calculator — uses functions and operators to perform math operations.
+	•	Student Grade Manager — uses dictionaries and OOP to store and calculate grades.
+	•	Contact Book — uses dictionaries/files to store and search names and phone numbers.
+Example
+import random
+ 
+# Number Guessing Game (mini project)
+secret = random.randint(1, 20)
+guess = int(input("Guess a number between 1 and 20: "))
+ 
+while guess != secret:
+    if guess > secret:
+        print("Too high!")
+    else:
+        print("Too low!")
+    guess = int(input("Guess again: "))
+ 
+print("Correct! You guessed it.")
+
+Practice Questions
+1. Build a simple calculator program that asks for two numbers and an operator (+, -, *, /) and prints the result.
+2. Build a To-Do list program where the user can add tasks to a list and print all tasks at the end.
+
+20. Advanced Python
+Once you're comfortable with the basics, these advanced features help you write shorter, faster, and more powerful Python code.
+Key Points
+	•	List comprehensions: a short way to build lists, e.g. [x*x for x in range(5)]
+	•	Lambda functions: small anonymous functions, e.g. lambda x: x * 2
+	•	Exception handling: try/except catches errors so programs don't crash.
+	•	Decorators: functions that modify the behavior of other functions.
+	•	Generators (yield) and iterators help process large data efficiently without loading it all into memory.
+Example
+# List comprehension
+squares = [x * x for x in range(1, 6)]
+print(squares)
+ 
+# Lambda function
+double = lambda x: x * 2
+print(double(5))
+ 
+# Exception handling
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+ 
+# Generator
+def count_up_to(n):
+    i = 1
+    while i <= n:
+        yield i
+        i += 1
+ 
+for num in count_up_to(5):
+    print(num)
+
+Practice Questions
+1. Write a list comprehension that creates a list of cubes (x**3) for numbers 1 to 10.
+2. Write a try/except block that asks the user for a number and catches the error if they type something that isn't a number (ValueError).

@@ -1,0 +1,60 @@
+﻿{
+    "number":  1,
+    "title":  "Introduction to wow222",
+    "duration":  "15m",
+    "difficulty":  "Beginner",
+    "status":  "live",
+    "ai":  false,
+    "module_id":  "ejGCdo9gC17z0gJbuD1D",
+    "id":  "ejGCdo9gC17z0gJbuD1D-intro",
+    "courseTitle":  "WOW",
+    "chapterTitle":  "wow222",
+    "lessonNumber":  1,
+    "totalLessons":  1,
+    "courseProgress":  0,
+    "xpReward":  100,
+    "estimatedTime":  "15m",
+    "readTime":  "15m",
+    "topicOverview":  {
+                          "what":  "Module description",
+                          "why":  "This is a fundamental concept in Python.",
+                          "where":  "Used in many real-world Python applications."
+                      },
+    "objectives":  [
+                       {
+                           "id":  "obj1",
+                           "text":  "Understand the basic concepts"
+                       }
+                   ],
+    "conceptExplanation":  {
+                               "title":  "Core Concepts",
+                               "description":  "No notes available.",
+                               "keyConcepts":  [
+
+                                               ]
+                           },
+    "flowDiagram":  null,
+    "keyTakeaways":  [
+                         "Review the practice questions to reinforce your knowledge."
+                     ],
+    "syntax":  null,
+    "codeExamples":  [
+
+                     ],
+    "realWorldUseCases":  null,
+    "features":  null,
+    "advantages":  null,
+    "commonMistakes":  null,
+    "bestPractices":  null,
+    "comparisons":  null,
+    "interviewQuestions":  null,
+    "faqs":  null,
+    "assignment":  null,
+    "practiceQuestions":  [
+
+                          ],
+    "quizQuestions":  [
+
+                      ],
+    "initialCode":  ""
+}

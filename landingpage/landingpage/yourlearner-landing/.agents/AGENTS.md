@@ -1,0 +1,1 @@
+Whenever the user asks to make changes, apply those changes directly to the existing file structure instead of creating a new one (e.g. avoid creating new projects or scaffolding new apps if they are already inside `/Users/princepanara/Desktop/py platform/yourlearner-landing` or similar projects, unless explicitly requested).
